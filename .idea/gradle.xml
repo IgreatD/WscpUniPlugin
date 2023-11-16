@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/uniplugin_base" />
+            <option value="$PROJECT_DIR$/uniplugin_bugly" />
             <option value="$PROJECT_DIR$/uniplugin_video_play" />
           </set>
         </option>

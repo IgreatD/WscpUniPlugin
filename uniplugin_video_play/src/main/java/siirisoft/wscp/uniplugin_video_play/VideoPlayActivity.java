@@ -11,11 +11,13 @@ import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
+import com.shuyu.gsyvideoplayer.cache.CacheFactory;
 import com.shuyu.gsyvideoplayer.player.PlayerFactory;
 import com.shuyu.gsyvideoplayer.utils.OrientationUtils;
 import com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer;
 
 import tv.danmaku.ijk.media.exo2.Exo2PlayerManager;
+import tv.danmaku.ijk.media.exo2.ExoPlayerCacheManager;
 
 public class VideoPlayActivity extends Activity {
 
@@ -31,6 +33,7 @@ public class VideoPlayActivity extends Activity {
 
     private void init() {
         PlayerFactory.setPlayManager(Exo2PlayerManager.class);
+        CacheFactory.setCacheManager(ExoPlayerCacheManager.class);
         videoPlayer = findViewById(R.id.video_player);
         Intent intent = getIntent();
         String url = intent.getStringExtra("url");
