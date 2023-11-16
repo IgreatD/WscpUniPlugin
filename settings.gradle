@@ -15,6 +15,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "UniPlugin-Wscp"
-include ':app'
 include ':uniplugin_base'
 include ':uniplugin_video_play'
