@@ -2,7 +2,7 @@ apply from: "$rootDir/gradle/lib.gradle"
 
 apply from: "$rootDir/gradle/publish.gradle"
 android {
-    namespace 'com.siiri.uniplugin.video_play'
+    namespace 'com.siiri.uniplugin.bugly'
 }
 
 dependencies {
