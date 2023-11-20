@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Siiri/wscp/UniPluginWscp/demo/src/main/res/layout/activity_main.xml" value="0.25052083333333336" />
+        <entry key="..\:/Siiri/wscp/UniPluginWscp/uniplugin_video_play/src/main/res/drawable/ic_baseline_close_24.xml" value="0.24" />
+        <entry key="..\:/Siiri/wscp/UniPluginWscp/uniplugin_video_play/src/main/res/drawable/ic_baseline_close_fullscreen_24.xml" value="0.24" />
+        <entry key="..\:/Siiri/wscp/UniPluginWscp/uniplugin_video_play/src/main/res/drawable/ic_baseline_fullscreen_24.xml" value="0.24" />
         <entry key="..\:/Siiri/wscp/UniPluginWscp/uniplugin_video_play/src/main/res/layout/activity_video_play.xml" value="0.2015625" />
       </map>
     </option>

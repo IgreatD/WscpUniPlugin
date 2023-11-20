@@ -43,12 +43,16 @@ public class VideoPlayActivity extends Activity {
         if (!TextUtils.isEmpty(thumb)) {
             setThumb(thumb);
         }
+
+        orientationUtils = new OrientationUtils(this, videoPlayer);
+        videoPlayer.getBackButton().setImageResource(R.drawable.ic_baseline_close_24);
+        videoPlayer.setEnlargeImageRes(R.drawable.ic_baseline_fullscreen_24);
+        videoPlayer.setShrinkImageRes(R.drawable.ic_baseline_fullscreen_exit_24);
         if (TextUtils.isEmpty(title)) {
-            videoPlayer.setUp(url, true, "视频播放");
+            videoPlayer.setUp(url, true, "");
         } else {
             videoPlayer.setUp(url, true, title);
         }
-        orientationUtils = new OrientationUtils(this, videoPlayer);
         videoPlayer.setFullHideStatusBar(true);
         videoPlayer.setFullHideActionBar(true);
         videoPlayer.getFullscreenButton().setOnClickListener(v -> orientationUtils.resolveByClick());

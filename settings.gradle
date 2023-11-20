@@ -18,3 +18,5 @@ rootProject.name = "UniPlugin-Wscp"
 include ':uniplugin_base'
 include ':uniplugin_video_play'
 include ':uniplugin_bugly'
+include ':uniplugin_location'
+include ':demo'
