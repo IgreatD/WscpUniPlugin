@@ -2,10 +2,6 @@ apply from: "$rootDir/gradle/lib.gradle"
 
 apply from: "$rootDir/gradle/publish.gradle"
 
-android {
-    namespace 'com.siiri.uniplugin.video_play'
-}
-
 dependencies {
     compileOnly 'com.github.bumptech.glide:glide:4.9.0'
     api  'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.4.0-release-jitpack'

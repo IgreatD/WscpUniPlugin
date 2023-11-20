@@ -5,7 +5,7 @@
     <application>
 
         <activity
-            android:name=".VideoPlayActivity"
+            android:name="siirisoft.wscp.uniplugin_video_play.VideoPlayActivity"
             android:theme="@style/Theme.AppCompat.Full"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:screenOrientation="portrait" />
