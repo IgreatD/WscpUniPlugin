@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.shuyu.gsyvideoplayer.GSYVideoManager;
 import com.shuyu.gsyvideoplayer.cache.CacheFactory;
 import com.shuyu.gsyvideoplayer.player.PlayerFactory;
@@ -41,6 +42,8 @@ public class VideoPlayActivity extends Activity {
         String thumb = intent.getStringExtra("thumb");
         if (!TextUtils.isEmpty(thumb)) {
             setThumb(thumb);
+        } else {
+            loadCover(url);
         }
 
         orientationUtils = new OrientationUtils(this, videoPlayer);
@@ -61,6 +64,20 @@ public class VideoPlayActivity extends Activity {
         videoPlayer.getBackButton().setOnClickListener(v -> onBackPressed());
 
         videoPlayer.startPlayLogic();
+    }
+
+    private void loadCover(String url) {
+        ImageView imageView = new ImageView(this);
+        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+        Glide.with(this)
+                .setDefaultRequestOptions(
+                        new RequestOptions()
+                                .frame(0)
+                                .centerCrop()
+                )
+                .load(url).into(imageView);
+        videoPlayer.setThumbImageView(imageView);
+        videoPlayer.setThumbPlay(true);
     }
 
     // glide加载图片
