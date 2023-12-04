@@ -43,7 +43,7 @@ public class VideoPlayActivity extends Activity {
         if (!TextUtils.isEmpty(thumb)) {
             setThumb(thumb);
         } else {
-            loadCover(url);
+//            loadCover(url);
         }
 
         orientationUtils = new OrientationUtils(this, videoPlayer);
@@ -67,17 +67,17 @@ public class VideoPlayActivity extends Activity {
     }
 
     private void loadCover(String url) {
-        ImageView imageView = new ImageView(this);
-        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-        Glide.with(this)
-                .setDefaultRequestOptions(
-                        new RequestOptions()
-                                .frame(0)
-                                .centerCrop()
-                )
-                .load(url).into(imageView);
-        videoPlayer.setThumbImageView(imageView);
-        videoPlayer.setThumbPlay(true);
+//        ImageView imageView = new ImageView(this);
+//        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+//        Glide.with(this)
+//                .setDefaultRequestOptions(
+//                        new RequestOptions()
+//                                .frame(0)
+//                                .centerCrop()
+//                )
+//                .load(url).into(imageView);
+//        videoPlayer.setThumbImageView(imageView);
+//        videoPlayer.setThumbPlay(true);
     }
 
     // glide加载图片
