@@ -58,11 +58,15 @@ public class BuglyModule extends UniModule {
         if (options == null) {
             return;
         }
-        String error = options.getString("error");
-        if (TextUtils.isEmpty(error)) {
-            return;
+        try {
+            String error = options.getString("error");
+            if (TextUtils.isEmpty(error)) {
+                return;
+            }
+            CrashReport.postCatchedException(new Throwable(error));
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        CrashReport.postCatchedException(new Throwable(error));
     }
 
 }
