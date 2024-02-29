@@ -23,7 +23,7 @@ android {
 
 dependencies {
 
-    compileOnly fileTree(dir: '../uniplugin_base/libs', include: ['uniapp-v8-release.aar'])
+    compileOnly fileTree(dir: '../uniplugin_base/libs', include: ['uniapp-v8-release.aar','lib.5plus.base-release.aar'])
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.appcompat:appcompat:1.0.0'
